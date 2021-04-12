@@ -1,0 +1,90 @@
+@font-face { 
+	font-family: "Metal";
+    src: url("fonts/METAL.woff") format('woff');
+}
+
+body {
+	background-color: #9bcc99;
+	font-family: Metal;
+	font-size: 2em;
+}
+
+#login_form, #register_form{
+	border: ;
+	padding: 1em;
+	border-radius: 1em;
+	font-weight: bold;
+}
+
+.form-control-feedback{
+	right: 15px;
+}
+
+.alert{
+	display: none;
+}
+
+/**************** MEDIA QUERIES *********************/
+
+@media screen and (max-width: 480px){ 
+/* Add your styles for devices with a maximum width of 480 */ 
+	#content, #menu, .col-xs-3{
+		width: 100%;
+	}
+
+	#game_logo img{
+		display: none;
+	}
+
+	.col-xs-4{
+		width: 30%;
+	}
+
+	.col-xs-5{
+		float: none;
+		width: 100%;
+	}
+
+	a{
+		margin-left: 1em;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) { 
+	/* Add your styles for devices with a maximum width of 767 */ 
+	#content, #menu{
+		width: 100%;
+	}
+
+	#game_logo img{
+		width: 100%;
+	}
+
+	.col-xs-5{
+		float: none;
+		width: 37%;
+	}
+
+	.col-xs-3{
+		width: 100%;
+	}
+
+	.form-group{
+		margin-right: -100%;
+	}
+} 
+
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+	/* Add your styles for devices with a maximum width of 1024 */ 
+	#game_logo img{
+		width: 100%;
+	}
+
+	.col-xs-5{
+		width: 35%;
+	}
+
+	.col-xs-3{
+		width: 50%;
+	}
+}
