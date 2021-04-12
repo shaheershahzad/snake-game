@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/jpg" href="img/snake_fav.png" sizes="16x16">
+	<title>Snake Game</title>
+	
+	<!-- Jquery -->
+	<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	
+	<link type="text/css" rel="stylesheet" href="css/iniciar_sesion.css" />
+</head>
+<body>
+	<div id="game_logo">
+		<center><img src="img/snake_logo.jpg" title="Game logo"></center>
+	</div>
+	<div id="content">
+		<center>
+		<input type="hidden" id="user_full_name">
+		<div id="login_form">
+			<form method="POST" id="form_login" role="form" class="form-horizontal">
+				<div class="form-group" id="usernameInput">
+                    <label for="usuario" class="control-label col-xs-5">Usuario</label>
+                    <div class="col-xs-3">
+                        <input class="text form-control" required="required" type="text" name="usuario" id="usuario"  placeholder="Usuario" title="Enter your username..."/>
+                        <span></span>
+                    </div>      
+                </div>
+
+                <div class="form-group" id="passwordInput">
+                    <label for="password" class="control-label col-xs-5">Contraseña</label>
+                    <div class="col-xs-3">
+                        <input class="text form-control" required="required" type="password" name="password" id="password"  placeholder="Contraseña" title="Enter your password..."/>
+                        <span></span>
+                    </div>      
+                </div>
+
+                <div class="form-group">
+                   <label for="botones" class="control-label col-xs-4"></label>
+                   <div class="col-xs-4">
+                        <input  type="submit" name="submit" id="submit" value="Iniciar Sesión" class="btn btn-default" title="Login"/>
+                    </div>
+                </div>
+				<a href="#" id="crear_cuenta" title="Register form">No dispones de una cuenta de Snake Game? Regístrate</a>
+			</form>
+		</div>
+
+		<div id="register_form" style="display:none;">
+			<form id="form_registrar" method="POST" role="form" class="form-horizontal">
+				<div class="form-group" id="registerNameInput">
+                    <label for="fullname_registro" class="control-label col-xs-5">Nombre y Apellidos</label>
+                    <div class="col-xs-3">
+                        <input class="text form-control" required="required" type="text" name="fullname_registro" id="fullname_registro"  placeholder="Nombre y Apellidos" title="Enter your fullname..."/>
+                        <span></span>
+                    </div>      
+                </div>
+				
+				<div class="form-group" id="registerUsernameInput">
+                    <label for="usuario_registro" class="control-label col-xs-5">Usuario</label>
+                    <div class="col-xs-3">
+                        <input class="text form-control" required="required" type="text" name="usuario_registro" id="usuario_registro"  placeholder="Usuario" title="Enter your username..."/>
+                        <span></span>
+                    </div>      
+                </div>
+
+                <div class="form-group" id="registerPasswordInput">
+                    <label for="password" class="control-label col-xs-5">Contraseña</label>
+                    <div class="col-xs-3">
+                        <input class="text form-control" required="required" type="password" name="password_registro" id="password_registro"  placeholder="Contraseña" title="Enter your password..."/>
+                        <span></span>
+                    </div>      
+                </div>
+
+                <div class="form-group">
+                   <label for="botones" class="control-label col-xs-4"></label>
+                   <div class="col-xs-4">
+                        <input  type="submit" name="registrar" id="registrar" value="Registrarse" class="btn btn-default" title="Register"/>
+                    </div>
+                </div>
+				<a id="iniciar_sesion" href="#" title="Login form">Iniciar Sesión</a>
+			</form>
+		</div>
+        
+        <!-- Alerts -->
+        <div class="alert alert-success" id="successAlert"></div>
+        <div class="alert alert-danger" id="errorAlert"></div>
+        <div class="alert alert-warning" id="warningAlert"></div>
+	</center>
+	</div>
+	<script src="js/iniciar_sesion.js"></script>
+</body>
+</html>

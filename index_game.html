@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="img/snake_fav.png" sizes="16x16">
+	<title>Snake Game</title>
+        <!-- Jquery -->
+        <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+		<!-- CSS -->
+        <link type="text/css" rel="stylesheet" href="css/snake_game.css" />
+
+        <!--Bootbox-->
+        <script src="js/bootbox.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="cargador"></div>
+    <div id="timer" title="1 minute counter"></div>
+
+    <!-- Alerts -->
+    <div class="alert alert-danger" id="errorAlert"></div>
+<center>
+    <div id="content">
+        <div id="game_logo">
+            <center><img src="img/snake_logo.jpg" title="Game logo"></center>
+        </div>
+        <span id="sound" title="Music"></span><br>
+        <h3 id="points_display" style="display:none;"><span id="nombre_usuario"></span>, your score is <p id="usuario_puntos"><h2></h2></p></h3>
+
+        <!--Main  Menu-->
+        <div id="menu">
+             <ul>
+             <li><a href="#" id="start" title="Start a new game">Start<a></li>
+             <li><a href="#" id="levels" title="Select difficulty level">Levels<a></li>
+             <li><a href="#" id="highscores" title="Check the highest scores">All Time Scores<a></li>
+             <li><a href="#" id="highscoresPlayer" title="Check your highest scores">My Best Scores<a></li>
+             <li><a href="#" id="instructions" title="See how to play">Instructions<a></li>
+             <li><a href="#" id="credits" title="Game contributors">Credits<a></li>
+             </ul>
+        </div>
+
+        <!-- Opciones de dificultad -->
+        <div id="level_menu" style="display:none;">
+            <div id="level_menu_1">
+                <h2><i>SPEED LEVELS</i></h2>
+                <select id="difficulty" class="form-control" title="Game speed...">
+                     <option value="60">Very Easy</option>
+                     <option value="50">Easy</option>
+                     <option value="40" selected>Medium</option>
+                     <option value="30">Hard</option>
+                     <option value="20">Master</option>
+                </select>
+
+                <div class="checkbox" title="Walls">
+                    <label>
+                        <input type="checkbox" checked value="yes" id="walls"> Walls
+                    </label>
+                    <label>
+                        <input type="checkbox" value="no" id="nowalls"> No Walls
+                    </label>
+                </div>
+
+                <a href="#"><button id="btn-start" class="btn btn-primary btn-lg" title="Lets go!">Start</button></a>
+            </div>
+            <br>
+            <div id="level_menu_2">
+                <h2><i>GAME MODES</i></h2>
+                <div id="challenge" title="Lets test your skills!">
+                    <h2><i><a id="challengeMode" href="#">CHALLENGE</a></i></h2>
+                </div>
+            </div>
+            <a href="#"><button id="btn-return" class="btn btn-default btn-lg" title="Back">Back</button></a>
+        </div>
+
+        <!-- El canvas para el juego -->
+        <canvas id="canvas" width="720" height="540" style="display:none;">
+            Sorry! Your browser does not support "CANVAS" element.
+        </canvas>
+
+        <!-- Menú secundario -->
+        <div id="gameoverMenu" style="display:none;">
+             <ul>
+             <li><a href='#' id="playAgain" title="Try again?">Play Again</a></li>
+             <li><a href='#' id="mainMenu" title="Back to main menu?">Main Menu</a></li>
+             </ul>
+        </div>
+
+        <div id="highscores_table" style="display:none;"></div>
+
+        <div id="instructions_table" style="display:none;"></div>
+
+        <div id="creditsDiv" style="display:none;"></div>
+
+        <a href="#" id="cerrar_sesion" title="Good Bye!"><button class="btn btn-default">Log Out</button></a>
+        <a href="#" id="back_to_main_menu" title="Back"><button class="btn btn-default">Back</button></a>
+    </div>
+</center>
+
+<!-- Audio -->
+<audio id="main_music" loop>
+	<source src="audios/main.mp3" type="audio/mp3" />
+</audio>
+
+<audio id="gameOver">
+	<source src="audios/go.mp3" type="audio/mp3" />
+</audio>
+
+<audio id="food">
+	<source src="audios/food.mp3" type="audio/mp3" />
+</audio>
+<script src="js/snake.js"></script>
+</body>
+</html>		
